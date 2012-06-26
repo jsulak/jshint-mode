@@ -70,7 +70,7 @@
 
 (defun flymake-jshint-init ()
   (if (eq (jshint-mode-init) 'started)
-      (let* ((temp-file (flymake-init-create-temp-buffer-copy 'flymake-create-temp-inplace))
+      (let* ((temp-file (flymake-init-create-temp-buffer-copy 'flymake-create-temp-intemp))
              (local-file (file-relative-name temp-file
                                              (file-name-directory buffer-file-name)))
              (jshint-url (format "http://%s:%d/check" jshint-mode-host jshint-mode-port)))
